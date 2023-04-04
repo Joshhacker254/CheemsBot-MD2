@@ -196,10 +196,10 @@ module.exports = XeonBotInc = async (XeonBotInc, m, chatUpdate, store) => {
             if (typeof setting !== 'object') global.db.data.settings[botNumber] = {}
 	    if (setting) {
 		if (!isNumber(setting.status)) setting.status = 0
-		if (!('autobio' in setting)) setting.autobio = false
+		if (!('autobio' in setting)) setting.autobio = true
 	    } else global.db.data.settings[botNumber] = {
 		status: 0,
-		autobio: false,
+		autobio: true,
 	    }
 	    
         } catch (err) {
@@ -235,7 +235,7 @@ const reply = (teks) => {
             console.log('Limit Reseted')
         }, {
             scheduled: true,
-            timezone: "Asia/Kolkata"
+            timezone: "Africa/Nairobi"
         })
         
 	//auto set bio\\
